@@ -8,85 +8,90 @@
     <title>Amazon - Clone</title>
 </head>
 <body>
-    <div id="WebsiteMain-Container">
-
-        <!-- Navbar Section -->
-        <div id="navbar-container">
-            <nav id="navbar">
-                <div id="brandContent" class="navbarInternalSections">
-                    <img src="Images/AmazonLogo.png" alt="AmazonLogo">
-                    <div id="location">
-                        <img src="Images/LocationIcon.png" alt="">
-                        <p>Update Location</p>
-                    </div>
-                </div>
-                <div id="SearchBar-container" class="navbarInternalSections">
-                    <div id="categorySelection">
-                        <select name="categories" id="categories">
-                            <option value="All categories">All</option>
-                            <option value="Beauty">Beauty</option>
-                            <option value="Books">Books</option>
-                            <option value="Clothing">Clothing</option>
-                            <option value="Cars">Cars and Accessories</option>
-                            <option value="Shoes">Shoes</option>
-                            <option value="Furniture">Furniture</option>
-                            <option value="Electronics">Electronic Devices</option>
-                            <option value="Jewellery">Jewellary</option>
-                        </select>
-                    </div>
-                    <div id="searchbarContainer" class="navbarInternalSections">
-                        <input type="text" placeholder="Search Amazon India">
-                    </div>
-                    <div id="searchButton">
-                        <button>
-                            <img src="Images/SearchIcon.png" alt="SearchIcon">
-                        </button>
-                    </div>
-                </div>
-                <div id="languageSelection-container" class="navbarInternalSections">
-                    <select name="categories" id="categories">
-                        <option value="English">Eng</option>
-                        <option value="Hindi">Hin</option>
-                        <option value="Chinese">Chi</option>
-                        <option value="Arabic">Arab</option>
-                    </select>
-                </div>
-
-                <div id="signIn-container" class="navbarInternalSections">
-                    <button id="signInButton">
-                        <p>Hello</p>
-                        <p>Sign In</p>
-                    </button>
-                </div>
-
-                <div id="returnNorder-container" class="navbarInternalSections">
-                    <div id="returnNorder-button">
-                        <button>
-                            <p>Return</p>
-                            <p>& Orders</p>
-                        </button>
-                    </div>
-                </div>
-
-                <div id="cartContainer" class="navbarInternalSections">
-                    <button>
-                        <img src="Images/CartIcon.png" alt="Cart">
-                    </button>
-                </div>
-            </nav>
-        </div>
-
-        <!-- Carousal Wallpapers -->
-        <div class="carousel">
-            <div class="carousel-images">
-              <img src="Images/Carousal Image 1.jpg" alt="Wallpaper 1" class="carousel-image">
-              <img src="Images/Carousal Image 2.jpg" alt="Wallpaper 1" class="carousel-image">
-              <img src="Images/Carousal Image 3.jpg" alt="Wallpaper 1" class="carousel-image">
-              <img src="Images/Carousal Image 4.jpg" alt="Wallpaper 1" class="carousel-image">
-              <img src="Images/Carousal Image 5.jpg" alt="Wallpaper 1" class="carousel-image">
-              <img src="Images/Carousal Image 6.jpg" alt="Wallpaper 1" class="carousel-image">
+    <header>
+        <div id="navbar">
+            <div id="LogoContainer">
+                <img src="Images/AmazonLogo.png" alt="Amazon Logo">
             </div>
-          </div>
-    </div>
+
+            <div id="LocationContainer">
+                <img src="Images/LocationIcon.png" alt="Location Icon">
+                <div id="LocationInfo">
+                    <p style="font-size: 12px; color: rgb(202, 202, 202);">Delivering to Ghaziabad 201017</p>
+                    <p style="font-size: 15px; font-weight: bold;">Update location</p>
+                </div>
+            </div>
+
+            <div id="InputContainer">
+                <select name="Categories" id="CategoriesContainer">
+                    <option value="All Categories">All</option>
+                    <option value="Amazon Alexa">Amazon Alexa</option>
+                    <option value="Apps">Apps</option>
+                    <option value="Games">Games</option>
+                    <option value="Books">Books</option>
+                    <option value="Clothing">Clothing</option>
+                    <option value="Beauty">Beauty</option>
+                    <option value="Sales">Sales</option>
+                </select>
+                <input type="text" placeholder="Search Amazon.in">
+                <button id="SearchIcon"><img src="Images/SearchIcon.png" alt=""></button>
+            </div>
+
+            <div id="Country">
+                <img src="Images/India Flag.png" alt="">
+                <p style="font-size: 14px; font-weight: bold; color: white">EN</p>
+            </div>
+
+            <div id="SignUpContainer">
+                <p style="font-size: 12px; color: white">Hello, SignIn</p>
+                <p style="font-size: 15px; font-weight: 600; color: white">Accounts & Lists</p>
+            </div>
+
+            <div id="Orders">
+                <p style="font-size: 12px; color: white">Returns</p>
+                <p style="font-size: 15px; font-weight: 600; color: rgb(255, 255, 255)">& Orders</p>
+            </div>
+
+            <div id="CartContainer">
+                <img src="Images/CartIcon.png" alt="Cart Icon">
+            </div>
+        </div>
+    </header>
+
+    <section id="Navigation">
+        <div id="HamburgerMenu">
+            <img src="Images/Hamburger Menu.jpg" alt="Hamburger Menu">
+            <p>All</p>
+        </div>
+        <p>Sale</p>
+        <p>MX Player</p>
+        <p>Best Sellers</p>
+        <p>Today's Deals</p>
+        <p>Mobiles</p>
+        <p>Customer Service</p>
+        <p>Electronics</p>
+        <p>Prime</p>
+        <p>Amazon Pay</p>
+        <p>Fashion</p>
+        <p>Books</p>
+        <p>Car Accessories</p>
+    </section>
+
+    
+    <section id="HeroSection">
+        <div id="HeroImage"></div>
+        <div id="NavigationButtons">
+            <button class="SliderBtn" id="SlideBtnL"><i class="fa-solid fa-angle-left"></i></button>
+            <button class="SliderBtn" id="SlideBtnR"><i class="fa-solid fa-angle-right"></i></button>
+        </div>  
+    </section>
+
+    <section id="ShopItems">
+
+
+
+
+    </section>
+
 </body>
 </html>

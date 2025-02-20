@@ -2,268 +2,291 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-body {
-    width: 100%;
-    height: 100%;
+    font-size: 16px;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-#navbar-container {
-    height: 50px;
-    width: 100%;
-    padding: 5px 10px 5px 10px;
-    background-color: rgb(30, 30, 73);
-}
-
+/* Navbar Container CSS Entire */
 #navbar {
-    height: 40px;
     width: 100%;
+    height: 55px;
+    background-color: #131921;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
-.navbarInternalSections {
-    width: max-content;
-    height: 40px;
+/* Logo Container CSS Start */
+#LogoContainer {
     display: flex;
-    justify-content: center;
     align-items: center;
 }
 
-#brandContent {
-    gap: 15px;
+#LogoContainer img {
+    height: 30px;
+    width: max-content;
+    object-fit: cover;
+}
+/* Logo Container CSS End */
+
+/* Location Container CSS Start */
+#LocationContainer {
+    height: 45px;
+    width: 220px;
+    display: flex;
+    color: white;
+    font-weight: 550;
+    justify-content: space-around;
+    align-items: center;
+    transition: background-color 0.15s ease-in-out;
+    padding: 4px;
 }
 
-#brandContent img {
-    height: 40px;
-    width: 80px;
-    object-fit: contain;
-}
-
-#brandContent img:hover {
+#LocationContainer:hover {
+    background-color: #1b324f;
     cursor: pointer;
 }
 
-#location {
+#LocationContainer img {
+    height: 25px;
+    width: 25px
+}
+/* Location Container CSS End */
+
+/* Input Container CSS Start */
+#InputContainer {
+    background-color: rgb(180, 180, 180);
+    height: max-content;
+    width: max-content;
+    display: flex;
+    border-radius: 5px;
+}
+
+#InputContainer select {
+    appearance: none; /* Removes default arrow */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    height: 40px;
+    width: 50px;
+    border: none;
+    background-color: #E6E6E6;
+    color: #4b4b4b;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    font-size: 14px;
+    padding-left: 10px;
+    transition: background-color 0.15s, color 0.15s;
+
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black"><path d="M7 10l5 5 5-5z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 5px center;
+    background-size: 16px;
+}
+
+#InputContainer select:hover {
+    background-color: #cfcfcf;
+    color: black;
+    cursor: pointer;
+}
+
+#InputContainer input {
+    height: 40px;
+    width: 600px;
+    font-size: 14px;
+    padding-left: 10px;
+    border: none;
+}
+
+#InputContainer button {
+    height: 40px;
+    width: 50px;
+    background-color: #FEBD69;
+    border: none;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding-top: 3px;
+}
+
+#InputContainer button:hover {
+    background-color: #e5a24b;
+    cursor: pointer;
+}
+
+#InputContainer button img {
+    height: 20px;
+    width: 20px;
+    object-fit: contain;
+}
+/* Input Container CSS End */
+
+/* Country Container CSS Start */
+#Country {
+    height: max-content;
+    width: max-content;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     gap: 5px;
+    transition: transform 0.15s ease-in-out;
 }
 
-#location img {
-    height: 30px;
+#Country:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+#Country img {
+    height: 25px;
     width: 25px;
-    object-fit: contain;
-    cursor: pointer;
-    transition: transform 0.3s ease;
+    object-fit: cover;
 }
+/* Country Container CSS End */
 
-#location img:hover {
-    transform: scale(1.05);
-}
-
-#location p {
-    color: white;
-    font-size: 15px;
-    cursor: pointer;
-}
-
-#categorySelection {
+/* SignIn Container CSS Start */
+#SignUpContainer {
     height: 40px;
-    width: 50px;
-}
-
-#categorySelection select {
-    height: 40px;
-    width: 50px;
-    font-size: 15px;
-    padding-left: 5px;
-    background-color: rgb(190, 190, 190);
-    border: none;
-    border-top-left-radius: 3px;
-    border-bottom-left-radius: 3px;
-}
-
-#searchbarContainer {
-    width: 700px;
-    height: 40px;
-}
-
-#searchbarContainer input {
-    width: 700px;
-    height: 40px;
-    font-size: 15px;
-    border: none;
-    padding-left: 10px;
-}
-
-#searchButton {
-    width: 50px;
-    height: 40px;
-}
-
-#searchButton button {
-    background-color: rgb(255, 200, 89);
-    border: none;
-    width: 50px;
-    height: 40px;
+    width: 135px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
-    border-top-right-radius: 3px;
-    border-bottom-right-radius: 3px;
+    transition: background-color 0.15s ease-in-out;
+    padding-left: 6px;
+}
+
+#SignUpContainer:hover {
+    background-color: #1b324f;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+}
+/* SignIn Container CSS End */
+
+/* Orders Container CSS Start */
+#Orders {
+    height: 40px;
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: background-color 0.15s ease-in-out;
+    padding-left: 15px;
 }
 
-#searchButton button:hover {
-    background-color: rgb(227, 177, 76);
+#Orders:hover {
+    background-color: #1b324f;
+    cursor: pointer;
+}
+/* Orders Container CSS End */
+
+/* Cart Container CSS Start */
+#CartContainer {
+    height: max-content;
+    width: max-content;
+    display: flex;
+    align-items: end;
+    transition: transform 0.15s ease-in-out;
 }
 
-#searchButton button:active {
-    background-color: rgb(255, 200, 89); 
+#CartContainer:hover {
+    transform: scale(1.1);
+    cursor: pointer;
 }
 
-#searchButton img {
+#CartContainer img {
+    height: 45px;
+    width: 45px;
+}
+/* Cart Container CSS End */
+
+/* Navigation Container CSS Start */
+#Navigation {
+    height: 40px;
+    width: 100%;
+    background-color: #232F3E;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    padding: 20px;
+}
+
+/* Hamburger Menu */
+#HamburgerMenu {
+    height: 40px;
+    width: 60px;
+    display: flex;
+    justify-content: center; /* Center align icon */
+    align-items: center;
+    padding-left: 8px;
+    transition: background-color 0.15s ease-in-out;
+}
+
+#HamburgerMenu:hover {
+    background-color: #2b4e7a;
+    cursor: pointer;
+}
+
+#HamburgerMenu img {
     height: 20px;
     width: 20px;
-    object-fit: cover;
+    object-fit: contain;
 }
 
-#languageSelection-container {
-    width: 60px;
-    height: 40px;
-}
-
-#languageSelection-container select {
-    width: 60px;
-    height: 40px;
-    background-color: rgb(30, 30, 73);
-    color: white;
+/* Navigation Text */
+#Navigation p {
     font-size: 15px;
-    /* border: none; */
+    padding: 11px 10px;
+    transition: background-color 0.15s ease-in-out;
+}
+
+/* Hover Effect for Text */
+#Navigation p:hover {
+    background-color: #2b4e7a;
     cursor: pointer;
-    transition: border 0.3s ease;
+}
+/* Navigation Container CSS End */
+
+/* HeroSection Container CSS Start*/
+#HeroSection {
+    position: relative;
+    height: max-content;
 }
 
-#languageSelection-container select:hover {
-    border: 1px solid white;
+#HeroImage {
+    width: 100%;
+    height: 600px;
+    background-image: url("Images/Carousal\ Image\ 2.jpg");
+    background-size: cover;
 }
 
-#signIn-container {
-    height: 40px;
-    width: 65px;
+#NavigationButtons {
+    position: absolute;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-    padding: 5px;
-    cursor: pointer;
-    transition: border 0.3s ease;
+    top: 0;
+    justify-content: space-between;
+    width: 100%;
 }
 
-#signIn-container:hover {
-    border: 1px solid white;
-}
-
-#signIn-container button {
-    background-color: rgb(30, 30, 73);
-    color: white;
+.SliderBtn {
     border: none;
+    background-color: transparent;
+    padding: 25px;
+    padding-top: 140px;
+    padding-bottom: 140px;
+    transition: background-color 0.15s ease-in-out;
 }
 
-#signInButton p {
-    text-align: left;
+.SliderBtn:hover {
+    background-color: rgba(255, 255, 255, 0.3);
 }
 
-#signInButton p:nth-child(2n+1) {
-    font-size: 12px;
+.SliderBtn i {
+    font-size: 50px;
+    transition: transform 0.15s ease-in-out;
 }
 
-#signInButton p:nth-child(2n) {
-    font-size: 15px;
-    font-weight: 550;
+.SliderBtn i:hover {
+    transform: scale(1.1);
 }
-
-#returnNorder-container {
-    height: 40px;
-    width: 80px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-content: center;
-}
-
-#returnNorder-button {
-    height: 40px;
-    width: 85px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-    transition: border 0.3s ease;
-    padding-left: 3px;
-}
-
-#returnNorder-button:hover {
-    border: 1px solid white;
-}
-
-#returnNorder-button button {
-    background-color: rgb(30, 30, 73);
-    color: white;
-    height: 40px;
-    width: 80px;
-    text-align: left;
-    border: none;
-}
-
-#returnNorder-button p:nth-child(2n) {
-    font-size: 15px;
-    font-weight: 550;
-}
-
-#cartContainer {
-    height: 40px;
-    width: 50px;
-}
-
-#cartContainer button {
-    background-color: rgb(30, 30, 73);
-    border: none;
-    height: 40px;
-    width: 50px;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-}
-
-#cartContainer button:hover {
-    transform: scale(1.05);
-}
-
-#cartContainer button img {
-    height: 40px;
-    width: 50px;
-    object-fit: cover;
-}
-
-.carousel {
-    width: 100vw;
-    height: 500px;
-    max-width: 600px; /* Adjust width as needed */
-    overflow: hidden; /* Hides anything outside the container */
-}
-
-.carousel-images {
-    display: flex;
-    width: 100%; /* 6 images, so width = 6 * 100% */
-    height: 500px;
-}
-
