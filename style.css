@@ -2,291 +2,260 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-size: 16px;
     font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
 }
 
-/* Navbar Container CSS Entire */
-#navbar {
-    width: 100%;
-    height: 55px;
+/* General Navbar! */
+#nav-belt {
     background-color: #131921;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+}
+
+/* Left side of Navbar! */
+#nav-left {
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: max-content;
+    gap: 20px;
+}
+
+#amazon-logo {
+    height: 30px;
+    object-fit: cover;
+}
+
+#amazon-logo img {
+    height: 30px;
+}
+
+#location {
+    height: 30px;
+    width: 150px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding-left: 20px;
-    padding-right: 20px;
 }
 
-/* Logo Container CSS Start */
-#LogoContainer {
-    display: flex;
-    align-items: center;
+#location img {
+    height: 20px;
+    width: 20px;
 }
 
-#LogoContainer img {
-    height: 30px;
-    width: max-content;
-    object-fit: cover;
+#location p {
+    font-size: 12px;
+    color: rgb(206, 206, 206);
 }
-/* Logo Container CSS End */
 
-/* Location Container CSS Start */
-#LocationContainer {
-    height: 45px;
-    width: 220px;
-    display: flex;
+#location span {
+    font-weight: 700;
     color: white;
-    font-weight: 550;
-    justify-content: space-around;
-    align-items: center;
-    transition: background-color 0.15s ease-in-out;
-    padding: 4px;
 }
 
-#LocationContainer:hover {
-    background-color: #1b324f;
-    cursor: pointer;
-}
-
-#LocationContainer img {
-    height: 25px;
-    width: 25px
-}
-/* Location Container CSS End */
-
-/* Input Container CSS Start */
-#InputContainer {
-    background-color: rgb(180, 180, 180);
-    height: max-content;
-    width: max-content;
+/* Center of Navbar */
+#nav-center {
     display: flex;
+    align-items: center;
+    justify-content: center;
+    width: max-content;
+    height: 40px;
     border-radius: 5px;
+    overflow: hidden;
 }
 
-#InputContainer select {
-    appearance: none; /* Removes default arrow */
+#category-container {
+    position: relative;  /* 🔥 To position the icon inside */
+    display: flex;
+    align-items: center;
+    background-color: #E6E6E6;
+    height: 40px;
+}
+
+#category-container select {
+    color: #707070;
+    appearance: none;
+    width: 55px;
     -webkit-appearance: none;
     -moz-appearance: none;
-    height: 40px;
-    width: 50px;
-    border: none;
+    font-size: 14px;
+    /* padding: 0 25px 0 10px; */
+    padding-left: 10px;
     background-color: #E6E6E6;
-    color: #4b4b4b;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-    font-size: 14px;
-    padding-left: 10px;
-    transition: background-color 0.15s, color 0.15s;
-
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black"><path d="M7 10l5 5 5-5z"/></svg>');
-    background-repeat: no-repeat;
-    background-position: right 5px center;
-    background-size: 16px;
-}
-
-#InputContainer select:hover {
-    background-color: #cfcfcf;
-    color: black;
-    cursor: pointer;
-}
-
-#InputContainer input {
-    height: 40px;
-    width: 600px;
-    font-size: 14px;
-    padding-left: 10px;
     border: none;
-}
-
-#InputContainer button {
-    height: 40px;
-    width: 50px;
-    background-color: #FEBD69;
-    border: none;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
-    padding-top: 3px;
-}
-
-#InputContainer button:hover {
-    background-color: #e5a24b;
+    height: 100%;
     cursor: pointer;
 }
 
-#InputContainer button img {
-    height: 20px;
-    width: 20px;
-    object-fit: contain;
-}
-/* Input Container CSS End */
-
-/* Country Container CSS Start */
-#Country {
-    height: max-content;
-    width: max-content;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    gap: 5px;
-    transition: transform 0.15s ease-in-out;
-}
-
-#Country:hover {
-    transform: scale(1.1);
-    cursor: pointer;
-}
-
-#Country img {
-    height: 25px;
-    width: 25px;
-    object-fit: cover;
-}
-/* Country Container CSS End */
-
-/* SignIn Container CSS Start */
-#SignUpContainer {
-    height: 40px;
-    width: 135px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    transition: background-color 0.15s ease-in-out;
-    padding-left: 6px;
-}
-
-#SignUpContainer:hover {
-    background-color: #1b324f;
-    cursor: pointer;
-}
-/* SignIn Container CSS End */
-
-/* Orders Container CSS Start */
-#Orders {
-    height: 40px;
-    width: 100px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    transition: background-color 0.15s ease-in-out;
-    padding-left: 15px;
-}
-
-#Orders:hover {
-    background-color: #1b324f;
-    cursor: pointer;
-}
-/* Orders Container CSS End */
-
-/* Cart Container CSS Start */
-#CartContainer {
-    height: max-content;
-    width: max-content;
-    display: flex;
-    align-items: end;
-    transition: transform 0.15s ease-in-out;
-}
-
-#CartContainer:hover {
-    transform: scale(1.1);
-    cursor: pointer;
-}
-
-#CartContainer img {
-    height: 45px;
-    width: 45px;
-}
-/* Cart Container CSS End */
-
-/* Navigation Container CSS Start */
-#Navigation {
-    height: 40px;
-    width: 100%;
-    background-color: #232F3E;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: white;
-    padding: 20px;
-}
-
-/* Hamburger Menu */
-#HamburgerMenu {
-    height: 40px;
-    width: 60px;
-    display: flex;
-    justify-content: center; /* Center align icon */
-    align-items: center;
-    padding-left: 8px;
-    transition: background-color 0.15s ease-in-out;
-}
-
-#HamburgerMenu:hover {
-    background-color: #2b4e7a;
-    cursor: pointer;
-}
-
-#HamburgerMenu img {
-    height: 20px;
-    width: 20px;
-    object-fit: contain;
-}
-
-/* Navigation Text */
-#Navigation p {
-    font-size: 15px;
-    padding: 11px 10px;
-    transition: background-color 0.15s ease-in-out;
-}
-
-/* Hover Effect for Text */
-#Navigation p:hover {
-    background-color: #2b4e7a;
-    cursor: pointer;
-}
-/* Navigation Container CSS End */
-
-/* HeroSection Container CSS Start*/
-#HeroSection {
-    position: relative;
-    height: max-content;
-}
-
-#HeroImage {
-    width: 100%;
-    height: 600px;
-    background-image: url("Images/Carousal\ Image\ 2.jpg");
-    background-size: cover;
-}
-
-#NavigationButtons {
+#category-container .fa-caret-down {
     position: absolute;
-    display: flex;
-    top: 0;
-    justify-content: space-between;
-    width: 100%;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    font-size: 12px;
+    color: #707070;
 }
 
-.SliderBtn {
+#nav-center input {
+    padding-left: 10px;
+    height: 40px;
+    width: 700px;
     border: none;
-    background-color: transparent;
-    padding: 25px;
-    padding-top: 140px;
-    padding-bottom: 140px;
-    transition: background-color 0.15s ease-in-out;
+    font-size: 14px;
 }
 
-.SliderBtn:hover {
-    background-color: rgba(255, 255, 255, 0.3);
+#nav-center button {
+    border: none;
+    background-color: #FEBD69;
+    height: 40px;
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
 }
 
-.SliderBtn i {
-    font-size: 50px;
-    transition: transform 0.15s ease-in-out;
+#nav-center button img {
+    height: 22px;
 }
 
-.SliderBtn i:hover {
-    transform: scale(1.1);
+/* Right of navbar! */
+#nav-right {
+    display: flex;
+    gap: 20px;
+}
+
+#nation-selection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+}
+
+#nation-selection img {
+    height: 25px;
+}
+
+#nation-selection p {
+    color: white;
+    font-weight: 600;
+}
+
+#nation-selection i {
+    color: rgb(174, 174, 174);
+}
+
+#accountslists {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#accountslists p {
+    color: white;
+    font-size: 12px;
+}
+
+#accountslists div {
+    display: flex;
+    gap: 4px;
+}
+
+#accountslists div p {
+    font-weight: 600;
+    font-size: 14px;
+}
+
+#accountslists i {
+    color: rgb(174, 174, 174);
+}
+
+#orders {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#orders p {
+    color: white;
+    font-size: 12px;
+}
+
+#orders div {
+    display: flex;
+    gap: 4px;
+}
+
+#orders div p {
+    font-weight: 600;
+    font-size: 14px;
+}
+
+#cart-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+}
+
+#cart-container i {
+    font-size: 25px;
+    color: white;
+}
+
+#cart-container p {
+    color: white;
+    font-weight: 600;
+    font-size: 14px;
+    align-self: flex-end;
+}
+
+/* Sub navigation bar */
+#subnav-belt {
+    display: flex;
+    background-color: #232F3E;
+    color: white;
+    justify-content: space-around;
+    align-items: center;
+    height: 40px;
+}
+
+#hamburger-menu-container i {
+    font-size: 16px;
+}
+
+#hamburger-menu-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+#subnav-belt a {
+    font-size: 14px;
+    text-decoration: none;
+    color: white;
+}
+
+/* Hero section */
+#hero-section {
+    background-image: url('Images/Carousal\ Image\ 2.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 600px;
+    position: relative;
+    color: white;
 }

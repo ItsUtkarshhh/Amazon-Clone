@@ -3,95 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    <title>Amazon - Clone</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+    <title>Amazon Clone</title>
 </head>
 <body>
     <header>
-        <div id="navbar">
-            <div id="LogoContainer">
-                <img src="Images/AmazonLogo.png" alt="Amazon Logo">
-            </div>
-
-            <div id="LocationContainer">
-                <img src="Images/LocationIcon.png" alt="Location Icon">
-                <div id="LocationInfo">
-                    <p style="font-size: 12px; color: rgb(202, 202, 202);">Delivering to Ghaziabad 201017</p>
-                    <p style="font-size: 15px; font-weight: bold;">Update location</p>
+        <nav id="nav-belt">
+            <div id="nav-left">
+                <div id="amazon-logo">
+                    <img src="Images/AmazonLogo.png" alt="amazon-logo">
+                </div>
+                <div id="location">
+                    <img src="Images/LocationIcon.png" alt="location-icon">
+                    <div>
+                        <p>Delivering to Utkarsh<span> Ghaziabad 201017</span></p>
+                    </div>
                 </div>
             </div>
-
-            <div id="InputContainer">
-                <select name="Categories" id="CategoriesContainer">
-                    <option value="All Categories">All</option>
-                    <option value="Amazon Alexa">Amazon Alexa</option>
-                    <option value="Apps">Apps</option>
-                    <option value="Games">Games</option>
-                    <option value="Books">Books</option>
-                    <option value="Clothing">Clothing</option>
-                    <option value="Beauty">Beauty</option>
-                    <option value="Sales">Sales</option>
-                </select>
+            <div id="nav-center">
+                <div id="category-container">
+                    <select name="category-section" id="category-section">
+                        <option value="all">All</option>
+                        <option value="Amazon Fresh">Amazon Fresh</option>
+                        <option value="Beauty">Beauty</option>
+                        <option value="Books">Books</option>
+                        <option value="Clothing">Clothing</option>
+                        <option value="Computers">Computers</option>
+                        <option value="Electronics">Electronics</option>
+                        <option value="Furniture">Furniture</option>
+                    </select>
+                    <i class="fa-solid fa-caret-down"></i>
+                </div>
                 <input type="text" placeholder="Search Amazon.in">
-                <button id="SearchIcon"><img src="Images/SearchIcon.png" alt=""></button>
+                <button aria-label="Search" type="submit">
+                    <img src="Images/SearchIcon.png" alt="SearchIcon">
+                </button>
             </div>
-
-            <div id="Country">
-                <img src="Images/India Flag.png" alt="">
-                <p style="font-size: 14px; font-weight: bold; color: white">EN</p>
+            <div id="nav-right">
+                <div id="nation-selection">
+                    <img src="Images/India Flag.png" alt="IndianFlag">
+                    <p>IND</p>
+                    <i class="fa-solid fa-caret-down"></i>
+                </div>
+                <div id="accountslists">
+                    <p>Hello, Utkarsh</p>
+                    <div>
+                        <p>Accounts & Lists</p>
+                        <i class="fa-solid fa-caret-down"></i>
+                    </div>
+                </div>
+                <div id="orders">
+                    <p>Returns</p>
+                    <div>
+                        <p>& Orders</p>
+                    </div>
+                </div>
+                <div id="cart-container">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <p>Cart</p>
+                </div>         
             </div>
-
-            <div id="SignUpContainer">
-                <p style="font-size: 12px; color: white">Hello, SignIn</p>
-                <p style="font-size: 15px; font-weight: 600; color: white">Accounts & Lists</p>
+        </nav>
+        <div id="subnav-belt">
+            <div id="hamburger-menu-container">
+                <i class="fa-solid fa-bars"></i>
+                <a href="#">All</a>
             </div>
-
-            <div id="Orders">
-                <p style="font-size: 12px; color: white">Returns</p>
-                <p style="font-size: 15px; font-weight: 600; color: rgb(255, 255, 255)">& Orders</p>
-            </div>
-
-            <div id="CartContainer">
-                <img src="Images/CartIcon.png" alt="Cart Icon">
-            </div>
+            <a href="#">MX Player</a>
+            <a href="#">Sale</a>
+            <a href="#">Gift card</a>
+            <a href="#">Buy Again</a>
+            <a href="#">Books</a>
+            <a href="#">Accessories</a>
+            <a href="#">Amazon Basics</a>
+            <a href="#">Audible Audiobooks</a>
+            <a href="#">Amazon Fresh</a>
+            <a href="#">Beauty</a>
+            <a href="#">Clothing</a>
+            <a href="#">Electronics</a>
+            <a href="#">Furniture</a>
+            <a href="#">Customer Service</a>
         </div>
     </header>
-
-    <section id="Navigation">
-        <div id="HamburgerMenu">
-            <img src="Images/Hamburger Menu.jpg" alt="Hamburger Menu">
-            <p>All</p>
+    <main>
+        <div id="hero-section">
+            
         </div>
-        <p>Sale</p>
-        <p>MX Player</p>
-        <p>Best Sellers</p>
-        <p>Today's Deals</p>
-        <p>Mobiles</p>
-        <p>Customer Service</p>
-        <p>Electronics</p>
-        <p>Prime</p>
-        <p>Amazon Pay</p>
-        <p>Fashion</p>
-        <p>Books</p>
-        <p>Car Accessories</p>
-    </section>
-
-    
-    <section id="HeroSection">
-        <div id="HeroImage"></div>
-        <div id="NavigationButtons">
-            <button class="SliderBtn" id="SlideBtnL"><i class="fa-solid fa-angle-left"></i></button>
-            <button class="SliderBtn" id="SlideBtnR"><i class="fa-solid fa-angle-right"></i></button>
-        </div>  
-    </section>
-
-    <section id="ShopItems">
-
-
-
-
-    </section>
-
+    </main>
+    <footer></footer>
 </body>
 </html>
